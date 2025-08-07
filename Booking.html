@@ -3,12 +3,12 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Welcome to the most extraordinary hotel in Ghana">
-
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" media="screen and (max-width:768px)" href="css/mobile.css">
-  <script src="https://kit.fontawesome.com/5551f71c86.js" crossorigin="anonymous"></script>
-  <title>Luxura Hotel | Booking </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book your stay at Hotel Luxura, Accra, Ghana.">
+  <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+  <link rel="icon" href="IMG/logo.png" type="image/png">
+  <title>Luxura Hotel | Booking</title>
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
   </script>
@@ -21,121 +21,88 @@
   </script>
 </head>
 
-<body>
+<body style="background: #f9f9f9; font-family: 'Segoe UI', Arial, sans-serif; color: #222;">
   <header>
-    <nav id="navbar">
-      <div class="container">
-        <img src="IMG/logo.png" alt="logo" id="logo">
-        <h1 class="logo"><a href="Index.html"> LUXURA HOTEL </a></h1>
-
-        <ul>
-          <li class="case"><a href="Index.html"> Home </a></li>
-          <li class="case"><a href="About.html"> About </a></li>
-          <li class="case"><a href="Rooms.html"> Rooms </a></li>
-          <li class="case"><a class="current" href="Booking.html"> Booking </a></li>
+    <nav id="navbar" style="box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+      <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
+        <div style="display: flex; align-items: center;">
+          <img src="IMG/logo.png" alt="logo" id="logo" style="width: 48px; height: 48px; border-radius: 12px; margin-right: 16px;">
+          <h1 class="logo" style="font-size: 2rem; letter-spacing: 2px;"><a href="Index.html" style="color: #f7c08a; text-decoration: none;">LUXURA HOTEL</a></h1>
+        </div>
+        <ul style="display: flex; gap: 2rem; list-style: none; margin: 0;">
+          <li class="case"><a href="Index.html">Home</a></li>
+          <li class="case"><a href="About.html">About</a></li>
+          <li class="case"><a href="Rooms.html">Rooms</a></li>
+          <li class="case"><a class="current" href="Booking.html">Booking</a></li>
         </ul>
       </div>
     </nav>
   </header>
-
-  <section id="book-form" class="py-3">
-    <div class="container">
-      <h1 class="l-heading"> <span class="text-primary"> BOOK A Night Or Two! </span> </h1>
-      <p> Please fill out the form below to make a booking </p>
+  <main style="max-width: 700px; margin: 2rem auto; padding: 0 1rem;">
+    <section style="background: #fff; border-radius: 18px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); padding: 2.5rem 2rem; margin-bottom: 2.5rem;">
+      <h1 class="l-heading" style="font-size: 2.2rem; color: #333; margin-bottom: 1.5rem; text-align: center;">Book <span class="text-primary">A Night Or Two!</span></h1>
+      <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem;">Please fill out the form below to make a booking</p>
       <form>
-        <div class="form-group">
-          <label for="name"> Name </label>
-          <input type="text" name="name" id="name" required>
+        <div class="form-group" style="margin-bottom: 1.2rem;">
+          <label for="name" style="display: block; margin-bottom: 0.5rem;">Name</label>
+          <input type="text" name="name" id="name" required style="width: 100%; padding: 0.7rem; border-radius: 8px; border: 1px solid #ddd;">
         </div>
-
-        <div class="form-group">
-          <label for="Email"> Email </label>
-          <input type="Email" name="Email" placeholder="example@gmail.com" id="Email" required>
+        <div class="form-group" style="margin-bottom: 1.2rem;">
+          <label for="Email" style="display: block; margin-bottom: 0.5rem;">Email</label>
+          <input type="email" name="Email" placeholder="example@gmail.com" id="Email" required style="width: 100%; padding: 0.7rem; border-radius: 8px; border: 1px solid #ddd;">
         </div>
-
-        <div class="form-group">
-          <label for="Phone"> Phone </label>
-          <input type="number" name="Phone" id="Phone" pattern="[0-9]{10}" required>
+        <div class="form-group" style="margin-bottom: 1.2rem;">
+          <label for="Phone" style="display: block; margin-bottom: 0.5rem;">Phone</label>
+          <input type="number" name="Phone" id="Phone" pattern="[0-9]{10}" required style="width: 100%; padding: 0.7rem; border-radius: 8px; border: 1px solid #ddd;">
         </div>
-
-        <div class="form-group">
-          <label for="Room"> Room Type </label>
-          <select name="Room Type" id="Room-type" required>
-
-            <option value="other"> other </option>
-            <option value="Guest-room-1-King"> Guest Room with one King</option>
-            <option value="Guest-room-2-Double"> Guest Room with two Double</option>
-            <option value="Club-lounge-1-King"> Club lounge with One King</option>
-            <option value="Club-lounge-2-Double"> Club lounge with two Double</option>
-
+        <div class="form-group" style="margin-bottom: 1.2rem;">
+          <label for="Room" style="display: block; margin-bottom: 0.5rem;">Room Type</label>
+          <select name="Room Type" id="Room-type" required style="width: 100%; padding: 0.7rem; border-radius: 8px; border: 1px solid #ddd;">
+            <option value="other">Other</option>
+            <option value="Guest-room-1-King">Guest Room with one King</option>
+            <option value="Guest-room-2-Double">Guest Room with two Double</option>
+            <option value="Club-lounge-1-King">Club lounge with One King</option>
+            <option value="Club-lounge-2-Double">Club lounge with two Double</option>
           </select>
-
         </div>
-
-        <div class="form-group">
-          <label for="Message"> Message </label>
-          <textarea name="Message" id="Message" required></textarea>
+        <div class="form-group" style="margin-bottom: 1.2rem;">
+          <label for="Message" style="display: block; margin-bottom: 0.5rem;">Message</label>
+          <textarea name="Message" id="Message" required style="width: 100%; padding: 0.7rem; border-radius: 8px; border: 1px solid #ddd; min-height: 80px;"></textarea>
         </div>
-
-        <button id="sub_btn" type="submit" class="btn"> Submit</button>
+        <button id="sub_btn" type="submit" class="btn" style="width: 100%; padding: 1rem; font-size: 1.1rem; border-radius: 8px; background: #f7c08a; color: #222; border: none; cursor: pointer; transition: background 0.3s;">Submit</button>
       </form>
-
-      <!-- <var>var Message = document.createElement("p");
-      message.textContent = "Thank you for submitting this form.";
-       </var> -->
-    </div>
-
-  </section>
-
-  <section id="booking-info" class="bg-dark">
-
-    <div class="container">
-      <h3 id=> For More Information please check below:</h3>
-      <div class="box1">
-        <i class="fa-solid fa-hotel fa-3x"></i>
-        <h3> Location</h3>
-        <p id="newcolor">
-          Airport Residencial Area, Accra, Ghana
-        </p>
+    </section>
+    <section id="booking-info" class="bg-dark" style="background: #333; color: #fff; border-radius: 18px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); padding: 2rem; margin-bottom: 2.5rem;">
+      <h3 style="text-align: center; margin-bottom: 2rem;">For More Information please check below:</h3>
+      <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+        <div class="box1" style="background: #444; border-radius: 12px; padding: 1.5rem; flex: 1 1 200px; text-align: center; color: #f7c08a;">
+          <i class="fa-solid fa-hotel fa-3x"></i>
+          <h3>Location</h3>
+          <p id="newcolor">Airport Residencial Area, Accra, Ghana</p>
+        </div>
+        <div class="box1" style="background: #444; border-radius: 12px; padding: 1.5rem; flex: 1 1 200px; text-align: center; color: #f7c08a;">
+          <i class="fa-solid fa-phone fa-3x"></i>
+          <h3>Phone Number</h3>
+          <p id="newcolor">0209088280</p>
+        </div>
+        <div class="box1" style="background: #444; border-radius: 12px; padding: 1.5rem; flex: 1 1 200px; text-align: center; color: #f7c08a;">
+          <i class="fa-solid fa-envelope fa-3x"></i>
+          <h3>Email</h3>
+          <p id="newcolor">frontdesk@hotelluxura.com</p>
+        </div>
       </div>
-      <div class="box1 ">
-        <i class="fa-solid fa-phone fa-3x"></i>
-        <h3> Phone Number </h3>
-        <p id="newcolor"> 0209088280 </p>
-      </div>
-      <div class="box1">
-        <i class="fa-solid fa-envelope fa-3x"></i>
-        <h3>Email</h3>
-        <p id="newcolor"> frontdesk@hotelluxura.com</p>
-      </div>
-    </div>
-  </section>
-
-
-
-  </div>
-  </section>
-
-
-
-
-
-
-  <footer id="main-footer">
-    <p> Hotel LUXURA &copy; 2024, All Rights Reserved </p>
+    </section>
+  </main>
+  <footer id="main-footer" style="background: #333; color: #f7c08a; text-align: center; padding: 1.5rem 0; border-radius: 0 0 18px 18px; margin-top: 2rem;">
+    <p>Hotel LUXURA &copy; 2024, All Rights Reserved</p>
   </footer>
+  <script src="input.js"></script>
+  <script>
+    window.embeddedChatbotConfig = {
+      chatbotId: "g2-xNL_4Ly65D46xk98Yj",
+      domain: "www.chatbase.co"
+    }
+  </script>
+  <script src="https://www.chatbase.co/embed.min.js" chatbotId="g2-xNL_4Ly65D46xk98Yj" domain="www.chatbase.co" defer></script>
 </body>
-<script src="input.js"></script>
-<script>
-  window.embeddedChatbotConfig = {
-  chatbotId: "g2-xNL_4Ly65D46xk98Yj",
-  domain: "www.chatbase.co"
-  }
-  </script>
-  <script
-  src="https://www.chatbase.co/embed.min.js"
-  chatbotId="g2-xNL_4Ly65D46xk98Yj"
-  domain="www.chatbase.co"
-  defer>
-  </script>
 </html>
